@@ -1,9 +1,9 @@
 #![allow(non_snake_case)]
 #![warn(missing_docs)]
 
-//! # 🧬 Dioxus Material Icons
+//! # 🧬 Dioxus Material Symbols
 //!
-//! This project provides a simple but configurable component to render Google's Material Icons in Dioxus.
+//! This project provides a simple but configurable component to render Google's Material Symbols in Dioxus.
 //!
 //! ## 🚀 How to get started
 //!
@@ -46,7 +46,7 @@
 //!
 //! ## 🔗 Useful links
 //!
-//! - [Overview of all icons](https://fonts.google.com/icons?selected=Material+Icons) (including names)
+//! - [Overview of all icons](https://fonts.google.com/icons?selected=Material+Symbols) (including names)
 //!
 //! ### Alternatives
 //!
@@ -56,7 +56,7 @@
 //!
 //! This software is licensed under the terms of the MIT License.
 //!
-//! Note: All Material Icons are licensed under the Apache License 2.0.
+//! Note: All Material Symbols are licensed under the Apache License 2.0.
 //!
 //! &copy; 2023 Lennart Kloock
 
@@ -68,27 +68,21 @@ pub struct MaterialIconStylesheetProps<'a> {
     /// Variant prop for the [`MaterialIconStylesheet`](MaterialIconStylesheet) component
     ///
     /// See [`MaterialIconVariant`](MaterialIconVariant) for more information.
-    #[props(default = MaterialIconVariant::Regular)]
+    #[props(default = MaterialIconVariant::Rounded)]
     pub variant: MaterialIconVariant<'a>,
 }
 
 /// Variants (also called categories) of the Material Icon font
 ///
-/// See all variants [here](https://fonts.google.com/icons?selected=Material+Icons).
+/// See all variants [here](https://fonts.google.com/icons?selected=Material+Symbols).
 #[derive(PartialEq)]
 pub enum MaterialIconVariant<'a> {
-    /// Regular
-    ///
-    /// Also called Filled.
-    Regular,
     /// Outlined
     Outlined,
-    /// Round
-    Round,
+    /// Rounded
+    Rounded,
     /// Sharp
     Sharp,
-    /// Two tone
-    TwoTone,
     /// Self hosted font file
     ///
     /// Provide an url to a ttf or otf file.
@@ -99,9 +93,9 @@ pub enum MaterialIconVariant<'a> {
 /// Stylesheet component
 ///
 /// This component includes the Material Icon stylesheet.
-/// This is required to render all Material Icons correctly.
+/// This is required to render all Material Symbols correctly.
 ///
-/// You can provide a variant as a prop (e.g. Round).
+/// You can provide a variant as a prop (e.g. Rounded).
 /// When you want to provide your own self-hosted font file,
 /// please use [`MaterialIconVariant::SelfHosted`](MaterialIconVariant::SelfHosted) and pass the
 /// file path or url to your .ttf or .otf file to it.
@@ -113,18 +107,14 @@ pub fn MaterialIconStylesheet<'a>(cx: Scope<'a, MaterialIconStylesheetProps<'a>>
                 style { format!(include_str!("./self-hosted-styles.css"), file) }
             ));
         }
-        MaterialIconVariant::Regular => "https://fonts.googleapis.com/icon?family=Material+Icons",
         MaterialIconVariant::Outlined => {
-            "https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            "https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
         }
-        MaterialIconVariant::Round => {
-            "https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+        MaterialIconVariant::Rounded => {
+            "https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded"
         }
         MaterialIconVariant::Sharp => {
-            "https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-        }
-        MaterialIconVariant::TwoTone => {
-            "https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone"
+            "https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp"
         }
     };
     cx.render(rsx!(link {
@@ -138,7 +128,7 @@ pub fn MaterialIconStylesheet<'a>(cx: Scope<'a, MaterialIconStylesheetProps<'a>>
 pub struct MaterialIconProps<'a> {
     /// Name (e.g. `home`)
     ///
-    /// Browse all icons [here](https://fonts.google.com/icons?selected=Material+Icons).
+    /// Browse all icons [here](https://fonts.google.com/icons?selected=Material+Symbols).
     pub name: &'a str,
     /// Size in pixels
     ///
@@ -151,7 +141,7 @@ pub struct MaterialIconProps<'a> {
     pub color: Option<MaterialIconColor<'a>>,
 }
 
-/// Colors of Material Icons
+/// Colors of Material Symbols
 ///
 /// As described [here](https://developers.google.com/fonts/docs/material_icons#styling_icons_in_material_design).
 #[derive(PartialEq)]
