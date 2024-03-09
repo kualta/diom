@@ -1,64 +1,9 @@
 #![allow(non_snake_case)]
 #![warn(missing_docs)]
 
-//! # 🧬 Dioxus Material Symbols
+//! # Dioxus Material Symbols
 //!
 //! This project provides a simple but configurable component to render Google's Material Symbols in Dioxus.
-//!
-//! ## 🚀 How to get started
-//!
-//! `cargo add dioxus-material-symbols`
-//!
-//! This project introduces two components:
-//!
-//! 1. [`MaterialIconStylesheet`](MaterialIconStylesheet)
-//! 2. [`MaterialIcon`](MaterialIcon)
-//!
-//! To be able to use the [`MaterialIcon`](MaterialIcon) component anywhere in your code, you first have to include
-//! a [`MaterialIconStylesheet`](MaterialIconStylesheet) component. When you want to use the default settings,
-//! just add it to your app's root component like this:
-//!
-//! ```no_rust
-//! MaterialIconStylesheet { }
-//! ```
-//!
-//! Have a look at the [`MaterialIconStylesheet`](MaterialIconStylesheet) docs for more options like self-hosting the icon font file.
-//!
-//! After that you can use the `MaterialIcon` component like you would expect it:
-//!
-//! ```no_rust
-//! MaterialIcon { name: "settings" }
-//! ```
-//!
-//! You can additionally specify the color and size.
-//!
-//! ```no_rust
-//! MaterialIcon {
-//!     name: "settings",
-//!     size: 24,
-//!     color: MaterialIconColor::Light,
-//! }
-//! ```
-//!
-//! ## 💡 Examples
-//!
-//! - [Button Example](https://github.com/lennartkloock/dioxus-material-symbols/blob/main/examples/button.rs)
-//!
-//! ## 🔗 Useful links
-//!
-//! - [Overview of all symbols](https://fonts.google.com/symbols?selected=Material+Symbols) (including names)
-//!
-//! ### Alternatives
-//!
-//! - [dioxus-free-symbols](https://crates.io/crates/dioxus-free-symbols) (Support for other icon packs)
-//!
-//! ## 📜 License
-//!
-//! This software is licensed under the terms of the MIT License.
-//!
-//! Note: All Material Symbols are licensed under the Apache License 2.0.
-//!
-//! &copy; 2023 Lennart Kloock
 
 use dioxus::prelude::*;
 
@@ -74,7 +19,7 @@ pub struct MaterialIconStylesheetProps<'a> {
 
 /// Variants (also called categories) of the Material Icon font
 ///
-/// See all variants [here](https://fonts.google.com/symbols?selected=Material+Symbols).
+/// See all variants [here](https://fonts.google.com/icons).
 #[derive(PartialEq)]
 pub enum MaterialIconVariant<'a> {
     /// Outlined
@@ -86,13 +31,13 @@ pub enum MaterialIconVariant<'a> {
     /// Self hosted font file
     ///
     /// Provide an url to a ttf or otf file.
-    /// You can download the files [here](https://github.com/google/material-design-symbols/tree/master/font).
+    /// You can download the files [here](https://github.com/google/material-design-icons/tree/master/font).
     SelfHosted(&'a str),
 }
 
 /// Stylesheet component
 ///
-/// This component includes the Material Icon stylesheet.
+/// This component includes the Material Symbols stylesheet.
 /// This is required to render all Material Symbols correctly.
 ///
 /// You can provide a variant as a prop (e.g. Rounded).

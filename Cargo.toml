@@ -1,11 +1,11 @@
 [package]
-name = "dioxus-material-icons"
-version = "1.2.0"
+name = "dioxus-material-symbols"
+version = "4.3.0"
 edition = "2021"
 license = "MIT"
-description = "Material Icons for Dioxus"
-repository = "https://github.com/lennartkloock/dioxus-material-icons"
-homepage = "https://lennart.codes/dioxus-material-icons"
+description = "Material Symbols for Dioxus"
+repository = "https://github.com/kualta/diom"
+homepage = "https://github.com/kualta/diom"
 keywords = ["dioxus", "material-design", "icons", "ui", "gui"]
 categories = ["web-programming", "gui"]
 readme = "README.md"

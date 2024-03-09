@@ -7,7 +7,7 @@
 
 use dioxus::prelude::*;
 
-use dioxus_material_icons::{MaterialIcon, MaterialIconStylesheet, MaterialIconVariant};
+use dioxus_material_symbols::{MaterialIcon, MaterialIconStylesheet, MaterialIconVariant};
 
 fn main() {
     dioxus_desktop::launch(App);
