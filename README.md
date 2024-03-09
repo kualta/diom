@@ -1,6 +1,6 @@
 # Dioxus Material Symbols
 
-This project provides a simple but configurable component to render Google's Material Symbols in Dioxus.
+This project provides a simple but configurable component to render Google's Material Symbols in [Dioxus](https://github.com/DioxusLabs/dioxus).
 
 It's a fork of [`dioxus-material-icons`](https://github.com/lennartkloock/dioxus-material-icons), the differences between this and cousin packages:
 - More icons (3200 vs 1500)
@@ -9,6 +9,9 @@ It's a fork of [`dioxus-material-icons`](https://github.com/lennartkloock/dioxus
 Material symbols also supports four adjustable variable font styles (fill, weight, grade, and optical size), but they are not implemented yet.
 
 More information and overview of all icons: [Google Material Symbols](https://fonts.google.com/icons) 
+
+> [!NOTE]
+> Latest supported [Dioxus](https://github.com/DioxusLabs/dioxus) version is 4.3.0
 
 ## How to get started
 
