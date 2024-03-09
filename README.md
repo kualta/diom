@@ -1,14 +1,18 @@
-# 🧬 Dioxus Material Icons
+# Dioxus Material Symbols
 
-<a href="https://crates.io/crates/dioxus-material-icons">
-    <img src="https://img.shields.io/crates/v/dioxus-material-icons.svg" alt="Crates.io version" />
-</a>
+This project provides a simple but configurable component to render Google's Material Symbols in Dioxus.
 
-This project provides a simple but configurable component to render Google's Material Icons in Dioxus.
+It's a fork of [`dioxus-material-icons`](https://github.com/lennartkloock/dioxus-material-icons), the differences between this and cousin packages:
+- More icons (3200 vs 1500)
+- Fewer styles (3 vs 5)
 
-## 🚀 How to get started
+Material symbols also supports four adjustable variable font styles (fill, weight, grade, and optical size), but they are not implemented yet.
 
-`cargo add dioxus-material-icons`
+More information and overview of all icons: [Google Material Symbols](https://fonts.google.com/icons) 
+
+## How to get started
+
+`cargo add dioxus-material-symbols`
 
 This project introduces two components:
 
@@ -41,22 +45,15 @@ MaterialIcon {
 }
 ```
 
-## 💡 Examples
-
-- [Button Example](https://github.com/lennartkloock/dioxus-material-icons/blob/main/examples/button.rs)
-
-## 🔗 Useful links
-
-- [Overview of all icons](https://fonts.google.com/icons?selected=Material+Icons) (including names)
-
-### Alternatives
+## Alternatives
 
 - [dioxus-free-icons](https://crates.io/crates/dioxus-free-icons) (Support for other icon packs)
+- [dioxus-material-icons](https://crates.io/crates/dioxus-material-icons) (Support for more styles)
 
-## 📜 License
+## License
 
 This software is licensed under the terms of the MIT License.
 
 Note: All Material Icons are licensed under the Apache License 2.0.
 
-&copy; 2023 Lennart Kloock
+&copy; 2024 Lennart Kloock, kualta
