@@ -11,7 +11,7 @@ Material symbols also supports four adjustable variable font styles (fill, weigh
 More information and overview of all icons: [Google Material Symbols](https://fonts.google.com/icons) 
 
 > [!NOTE]
-> Latest supported [Dioxus](https://github.com/DioxusLabs/dioxus) version is 4.3.0
+> Latest supported [Dioxus](https://github.com/DioxusLabs/dioxus) version is 0.4.3
 
 ## How to get started
 
